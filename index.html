@@ -74,17 +74,35 @@
             <img src="images/IMG_2112.jpeg" alt="Cute Dog 5">
         </div>
 
-        
-        <audio controls autoplay loop>
+        <!-- Background music -->
+        <audio id="bg-music" loop>
             <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
-    
+
     <script>
+        // Function to reveal the message
         function revealMessage() {
             document.getElementById('message').style.display = 'block';
         }
+
+        // Ensure audio plays on user interaction
+        document.addEventListener('click', function() {
+            let audio = document.getElementById('bg-music');
+            if (audio.paused) {
+                audio.play();
+            }
+        });
+
+        // Attempt autoplay on page load
+        window.addEventListener('load', function() {
+            let audio = document.getElementById('bg-music');
+            audio.play().catch(error => {
+                console.log('Autoplay prevented: User interaction required');
+            });
+        });
     </script>
+
 </body>
 </html>
