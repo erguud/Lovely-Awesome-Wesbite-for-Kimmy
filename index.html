@@ -62,19 +62,20 @@
         
         <button onclick="revealMessage()">Click to Reveal</button>
         
-        <p class="hidden-message" id="message">Bambi Suprise Attack!!! I LOVE YOU MEOW MEOW MEOW! 💖</p>
+        <p class="hidden-message" id="message">I LOVE YOU MEOW MEOW MEOW! 💖</p>
         
         <div class="heart">❤️❤️❤️</div>
         
         <div class="gallery">
-            <img src="/mnt/data/IMG_6059.jpeg" alt="Cute Dog 1">
-            <img src="/mnt/data/IMG_4954.jpeg" alt="Cute Dog 2">
-            <img src="/mnt/data/IMG_6419.jpeg" alt="Cute Dog 3">
-            <img src="/mnt/data/IMG_8742.jpeg" alt="Cute Dog 4">
-            <img src="/mnt/data/IMG_2112.jpeg" alt="Cute Dog 5">
+            <img src="images/IMG_6059.jpeg" alt="Cute Dog 1">
+            <img src="images/IMG_4954.jpeg" alt="Cute Dog 2">
+            <img src="images/IMG_6419.jpeg" alt="Cute Dog 3">
+            <img src="images/IMG_8742.jpeg" alt="Cute Dog 4">
+            <img src="images/IMG_2112.jpeg" alt="Cute Dog 5">
         </div>
+
         
-        <audio id="bg-music" autoplay loop>
+        <audio controls autoplay loop>
             <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
@@ -84,14 +85,6 @@
         function revealMessage() {
             document.getElementById('message').style.display = 'block';
         }
-
-        // Attempt to play audio on page load
-        window.addEventListener('load', function() {
-            let audio = document.getElementById('bg-music');
-            audio.play().catch(error => {
-                console.log('Autoplay prevented: User interaction required');
-            });
-        });
     </script>
 </body>
 </html>
